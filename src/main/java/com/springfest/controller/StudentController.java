@@ -18,6 +18,11 @@ public class StudentController {
 	
 	@Autowired
 	private StudentService studentService;
+	
+	@RequestMapping("/home")
+	public String getHome() {
+		return "redirect:/";
+	}
 
 	@RequestMapping("/")
 	public String getAllStudents(Model model) {
